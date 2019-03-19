@@ -16,5 +16,5 @@ Para executar a aplicação, basta clonar o projeto, já ter previamente instala
 - php artisan serve
 
 # Observações
-A intenção do teste desenvolvido foi utilizar o padrão de projetos do Laravel(MVC) com javascript e jquery como principal backend (conforme descrição do teste). Implementado também o padrão Repository, a fim de isolar consultas e ter melhor aproveitamento delas, tal como manter a organização do código.
+A intenção do teste desenvolvido foi utilizar o padrão de projetos do Laravel(MVC) utilizando jquery e javascript(conforme descrição do teste). Implementado também o padrão Repository, a fim de isolar consultas e ter melhor aproveitamento delas, tal como manter a organização do código.
 Alguns fluxos não finalizados por questão de tempo (como retornar a listagem ao inserir um cliente...etc). As rotas também não estão sendo autenticadas para o usuario logado.
