@@ -9,7 +9,7 @@
             <th>Excluir</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody id="tabelaClientes">
         <tr>
             <td>John</td>
             <td>Doe</td>

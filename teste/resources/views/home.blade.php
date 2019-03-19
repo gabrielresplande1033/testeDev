@@ -58,7 +58,7 @@
                                             Relatório
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="#">Gerar Relatório de Notas</a>
+                                            <a class="dropdown-item" id="abrirFormularioRelatorioNota" href="#">Gerar Relatório de Notas</a>
                                         </div>
                                     </li>
 
@@ -70,12 +70,15 @@
                         </nav>
 
 
+                        @include('inicial')
                         @include('cliente.formcliente')
                         @include('cliente.listacliente')
                         @include('nota.formnota')
+                        @include('nota.formrelatorio')
                         @include('nota.listanota')
                         @include('produto.formproduto')
                         @include('produto.formprodutoeditar')
+                        @include('cliente.formclienteeditar')
                         @include('produto.listaprodutos')
 
 

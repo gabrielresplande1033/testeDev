@@ -17,10 +17,6 @@ class Produto extends Migration
             $table->increments('id');
             $table->String('nome_produto');
             $table->decimal('valor');
-
-            $table->integer('nota_id')->unsigned()->nullable();
-            $table->foreign('nota_id')->references('id')->on('nota')->onDelete('cascade');
-
             $table->timestamps();
         });
     }

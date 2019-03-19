@@ -25,6 +25,17 @@ class Nota extends Model implements Transformable
     protected $fillable = [
         'numero_nota',
         'cliente_id',
+        'valor_total_nota'
     ];
+
+    public function cliente()
+    {
+        return $this->belongsTo(Cliente::class);
+    }
+
+    public function notaProduto()
+    {
+        return $this->hasOne(NotaProduto::class);
+    }
 
 }

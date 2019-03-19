@@ -26,6 +26,10 @@ $("#abrirListaNota").on("click", function() {
     escondeFormularios();
     $("#listaNota").css("display", "inline");
 });
+$("#abrirFormularioRelatorioNota").on("click", function() {
+    escondeFormularios();
+    $("#formRelatorioNota").css("display", "inline");
+});
 
 $(document).on("click", ".editarProduto", function () {
     escondeFormularios();
@@ -41,7 +45,22 @@ $(document).on("click", ".editarProduto", function () {
 
 });
 
+$(document).on("click", ".editarCliente", function () {
+    escondeFormularios();
+    $("#formClienteEditar").css("display", "inline");
+
+    var id = $(this).data('id');
+    var nomeCliente = $(this).data('nomecliente');
+    var cpfCliente = $(this).data('cpfcliente');
+
+    $("#idClienteEditar").val(id);
+    $("#nomeClienteEditar").val(nomeCliente);
+    $("#cpfClienteEditar").val(cpfCliente);
+
+});
+
 function escondeFormularios() {
+    $("#paginaInicial").css("display", "none");
     $("#listaNota").css("display", "none");
     $("#formNota").css("display", "none");
     $("#listaProduto").css("display", "none");
@@ -49,4 +68,5 @@ function escondeFormularios() {
     $("#listaCliente").css("display", "none");
     $("#formCliente").css("display", "none");
     $("#formProdutoEditar").css("display", "none");
+    $("#formRelatorioNota").css("display", "none");
 }

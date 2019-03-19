@@ -27,4 +27,9 @@ class Cliente extends Model implements Transformable
         'cpf_cliente'
     ];
 
+    public function nota()
+    {
+        return $this->hasMany(Nota::class);
+    }
+
 }

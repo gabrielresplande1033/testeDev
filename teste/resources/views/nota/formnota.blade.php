@@ -23,5 +23,13 @@
         </ul>
     </div>
 
+    <div class="formgroup">
+        <label>Valor Total</label>
+        <input type="number" name="valor_total_nota" id="valor_total_nota" class="form-control" value="0" readonly="true">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
 </form>
 </div>

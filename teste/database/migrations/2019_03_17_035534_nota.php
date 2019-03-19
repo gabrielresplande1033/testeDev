@@ -18,6 +18,8 @@ class Nota extends Migration
 
             $table->String('numero_nota');
 
+            $table->Double('valor_total_nota');
+
             $table->integer('cliente_id')->unsigned();
             $table->foreign('cliente_id')->references('id')->on('cliente')->onDelete('cascade');
 

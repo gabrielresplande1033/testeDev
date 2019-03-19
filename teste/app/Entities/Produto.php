@@ -28,4 +28,9 @@ class Produto extends Model implements Transformable
         'nota_id'
     ];
 
+    public function notaProduto()
+    {
+        return $this->hasOne(NotaProduto::class);
+    }
+
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Repositories\NotaProdutoRepository;
 use App\Repositories\NotaRepository;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class NotaController extends Controller
 {
@@ -28,6 +29,31 @@ class NotaController extends Controller
         }
 
         return redirect()->back();
+    }
+
+    public function retornarNotas()
+    {
+        $notas = $this->notaRepository->retornaNotaComValorTotal();
+
+        return response()->json($notas);
+    }
+
+    public function removeNotas(Request $request) {
+        try {
+            $removido = $this->notaRepository->delete($request->id);
+            return response()->json($removido);
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            exit;
+        }
+    }
+
+    public function gerarPDF(Request $request) {
+        $dadosRelatorio = $this->notaRepository->relatorio($request);
+
+        $pdf = PDF::loadView("nota.pdf", compact('dadosRelatorio'));
+        return $pdf->download("documento.pdf");
+
     }
 
 }

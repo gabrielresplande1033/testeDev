@@ -42,8 +42,6 @@ class ProdutoController extends Controller
     }
 
     public function editarProduto(Request $request) {
-
-        dd($request);
         $this->produtoRepository->update([
                                                 'nome_produto' => $request->nomeProdutoEditar,
                                                 'valor' => $request->valorProdutoEditar
